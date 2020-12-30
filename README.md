@@ -16,10 +16,12 @@ Updating my local repository README.md file and commit.
 1)Updating my local repository README.md file and commit.
 README.md 
 2) Restored the original files captured in initial commit of 12292020
+3) Restored the original files captured in initial commit of 12292020 which still had README.md file as part of 2nd commit
+1st update - 12302020
+
 ### Files used
 data files - chicago.csv, new_york_city.csv, washington.csv
 script - bikeshare.py
-README.md
 
 ### Credits
 https://pandas.pydata.org/pandas-docs/stable/index.html
