@@ -12,7 +12,13 @@ major cities in the United States—Chicago, New York City, and Washington. You 
  
 1st update - 12302020
 Updating my local repository README.md file and commit.
+2nd update - 12302020
+1)Updating my local repository README.md file and commit.
+README.md 
+2) Restored the original files captured in initial commit of 12292020
 ### Files used
+data files - chicago.csv, new_york_city.csv, washington.csv
+script - bikeshare.py
 README.md
 
 ### Credits
