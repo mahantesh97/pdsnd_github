@@ -174,21 +174,17 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
 def display_raw_data(df):
-    """Displays first 5 rows of raw data for selected city."""
-    raw_data = ""
-    while raw_data.lower() != "yes" or raw_data.lower() != "no":
-        raw_data = input("Do you want to see the first 5 rows of raw data for: {city}, Enter Yes or No.")
-        if raw_data.lower() == "yes":
-            print(df.head())
-            break
-        elif raw_data.lower() == "no":
-            break
+    """Displays 5 rows of raw data for selected city."""
+    start = 0
+    user_input = ''
+    while True:
+        if user_input.lower() != 'n':
+            print(df.iloc[start : start + 5])
+            start += 5
+            user_input = input('\nDo you want to see more raw data? Enter y or n.\n').title()
         else:
-            raw_data = input("Please enter: Yes or No:")
-
-print('-'*40)
+            break
 
    
 def main():
