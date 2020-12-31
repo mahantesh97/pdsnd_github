@@ -27,6 +27,7 @@ def get_filters():
 # get user input for month (all, january, february, ... , june)
 
     months = ['january', 'february', 'march', 'april', 'may', 'june']
+    print(months)
     month = input("Which month would you like to filter by?\n")
     while month.lower() not in months:
         print("You have entered an invalid month")
@@ -35,6 +36,7 @@ def get_filters():
 
 # get user input for day of week (all, monday, tuesday, ... sunday)    
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    print(days)
     day = input('Which day would you like to filter by?\n')
     while day.lower() not in days:
         print("You have entered an invalid day")
@@ -62,7 +64,7 @@ def load_data(city, month, day):
 
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.day_name
+    df['day_of_week'] = df['Start Time'].dt.weekday_name
     return df
 
 def time_stats(df):
@@ -73,7 +75,7 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    display the most common month
+    # display the most common month
     common_month = df['month'].mode()[0]
     print('the most common month is:{}.\n'.format(common_month))
     
@@ -174,6 +176,7 @@ def user_stats(df):
 
     
 def display_raw_data(df):
+    """Displays first 5 rows of raw data for selected city."""
     raw_data = ""
     while raw_data.lower() != "yes" or raw_data.lower() != "no":
         raw_data = input("Do you want to see the first 5 rows of raw data for: {city}, Enter Yes or No.")
